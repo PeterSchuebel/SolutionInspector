@@ -59,7 +59,8 @@ namespace SolutionInspector.Model.Persistence
                           .Concat(root.Descendants(root.Name.Namespace + "Content")
                           .Concat(root.Descendants(root.Name.Namespace + "None")
                           .Concat(root.Descendants(root.Name.Namespace + "ClInclude")
-              )));
+                          .Concat(root.Descendants(root.Name.Namespace + "CustomBuild")
+              ))));
 
             return all.Select(element =>
                               {
